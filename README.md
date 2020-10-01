@@ -6,7 +6,7 @@ Matlab project for fairspace
 
 Requires: Reinforcement Learning toolbox
 
-##Usage:
+## Usage:
 
 To train the network edit parameters given below in train_ddpg.m or train_dqn.m and run
 
