@@ -2,7 +2,7 @@
 Matlab project for fairspace
 
 
-## This project was written and tested in Matlab2019a.
+## This project was written and tested in Matlab2019a however, it should run in the later versions as well.
 
 Requires: Reinforcement Learning toolbox
 
