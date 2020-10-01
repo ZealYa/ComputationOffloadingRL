@@ -11,7 +11,7 @@ Requires: Reinforcement Learning toolbox
 To train the network edit parameters given below in train_ddpg.m or train_dqn.m and run
 
 
-max_episodes=2000;
+max_episodes=2000;\n
 sample_time=0.1;
 stopTime=40;
 interval=1;
