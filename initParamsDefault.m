@@ -53,11 +53,11 @@ j2_computeLoadPerBit=1.5e9/j2_data_size;
 
 
 %% Reward weights
-w_t=1; %Time
-w_e=5; %Energy
-w_r=10; %Security Risk
-w_completion=0;
-w_drop=10;
+w_t=0.1; %Time
+w_e=0.5; %Energy
+w_r=1; %Security Risk
+w_completion=0.01;
+w_drop=1;
 % alpha=1; % Risk is proportional to Data Size times alpha
 
 % Currently not in use
@@ -70,7 +70,7 @@ Packet_Size=50*8; % 50 bytes
 %Permissible_Error_Bits=32; Not in use currently
 
 %%
-obsInfo = rlNumericSpec([6 1]);
+obsInfo = rlNumericSpec([8 1]);
 % obsInfo.Description = {'x, y'};
 
 
