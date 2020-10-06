@@ -37,10 +37,10 @@ trainingOptions = rlTrainingOptions(...
     'SaveAgentCriteria','EpisodeReward',...
     'SaveAgentDirectory','sa_ddpg',...
     'SaveAgentValue',-20);
-% trainOpts.UseParallel = true;
-% trainOpts.ParallelizationOptions.Mode = "async";
-% trainOpts.ParallelizationOptions.DataToSendFromWorkers = "experiences";
-% trainOpts.ParallelizationOptions.StepsUntilDataIsSent = 30;
-% trainOpts.ParallelizationOptions.WorkerRandomSeeds = -1;
+trainOpts.UseParallel = true;
+trainOpts.ParallelizationOptions.Mode = "async";
+trainOpts.ParallelizationOptions.DataToSendFromWorkers = "experiences";
+trainOpts.ParallelizationOptions.StepsUntilDataIsSent = 30;
+trainOpts.ParallelizationOptions.WorkerRandomSeeds = -1;
 trainingStats = train(agent,env,trainingOptions);
 
