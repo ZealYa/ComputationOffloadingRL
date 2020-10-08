@@ -10,7 +10,7 @@ options.USE_PRE_TRAINED_MODEL = USE_PRE_TRAINED_MODEL;
 
 % Load parameter values to defaults
 initParamsDefault;
-
+initialise_ml_common;
 if(strcmpi(options.algo,'ddpg'))
     initialise_ddpg_agent;
 elseif (strcmpi(options.algo,'dqn'))

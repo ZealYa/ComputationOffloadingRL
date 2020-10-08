@@ -4,7 +4,7 @@ close all;
 
 
 
-max_episodes=2;
+max_episodes=1;
 sample_time=0.1;
 stopTime=40;
 interval=1;

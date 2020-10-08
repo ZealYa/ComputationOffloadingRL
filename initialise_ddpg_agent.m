@@ -2,7 +2,7 @@
 % https://uk.mathworks.com/help/reinforcement-learning/ug/train-agent-to-control-flying-robot.html
 
 % specify the number of outputs for the hidden layers.
-initialise_ml_common;
+% initialise_ml_common;
 % hiddenLayerSize = 24;
 % 
 % observationPath = [

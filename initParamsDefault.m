@@ -79,7 +79,7 @@ job_types=1;
 
 if(options.continous_action)
     if(job_types==1)
-        actInfo=rlNumericSpec([2 1],'LowerLimit',0,'UpperLimit',1);
+        actInfo=rlNumericSpec([3 1],'LowerLimit',0,'UpperLimit',1);
     elseif(job_types==2)
         actInfo=rlNumericSpec([6 1],'LowerLimit',0,'UpperLimit',1);
     end
@@ -87,8 +87,8 @@ else
     % Actions
     % vectors = { [1, 2]', [0, 1]'};
      if(job_types==1)
-%         vectors = {[0,0.32,0.53,0.56,0.85,1]';[0,0.44,0.63,0.69,0.75,1]'; [0, 0.2, 0.4,0.6,0.8,1]'; };
-        vectors = { [0, 0.2, 0.4,0.6,0.8,1]';[0, 0.2, 0.4,0.6,0.8,1]'; };
+        vectors = {[0,0.32,0.53,0.56,0.85,1]';[0,0.44,0.63,0.69,0.75,1]'; [0, 0.2, 0.4,0.6,0.8,1]'; };
+%         vectors = { [0, 0.2, 0.4,0.6,0.8,1]';[0, 0.2, 0.4,0.6,0.8,1]'; };
 %         vectors={ [0,0.32,0.53,0.56,0.85,1]'};
     elseif(job_types==2)
         vectors = { [0,0.32,0.53,0.56,0.85,1]';[0,0.44,0.63,0.69,0.75,1]';[0, 0.2, 0.4,0.6,0.8,1]';[0, 0.2, 0.4,0.6,0.8,1]';[0, 0.2, 0.4,0.6,0.8,1]';[0, 0.2, 0.4,0.6,0.8,1]';};
@@ -120,7 +120,9 @@ end
 % set_param('bare_system/System/avg_users','Value','avg_usersArg')
 % set_param('bare_system/System/lower_limit','Value','lower_limitArg');
 % set_param('bare_system/System/upper_limit','Value','upper_limitArg');
-% modelWorkspace = get_param('bare_system','ModelWorkspace');
+modelWorkspace = get_param('bare_system','ModelWorkspace');
+assignin(modelWorkspace,'conf_lambdaArg',Simulink.Parameter(1));
+assignin(modelWorkspace,'int_lambdaArg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'risk_delayArg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'risk_delay_lengthArg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'lower_limitArg',Simulink.Parameter(1));
@@ -130,4 +132,5 @@ end
 % assignin(modelWorkspace,'lambda2Arg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'random_seedArg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'avg_usersArg',Simulink.Parameter(4));
-% set_param('bare_system','ParameterArgumentNames','lambda1Arg,lambda2Arg,random_seedArg,avg_usersArg,risk_delayArg,risk_delay_lengthArg,lower_limitArg,upper_limitArg')
+set_param('bare_system','ParameterArgumentNames',...
+    'lambda1Arg,lambda2Arg,random_seedArg,conf_lambdaArg,risk_delayArg,risk_delay_lengthArg,lower_limitArg,upper_limitArg,int_lambdaArg')
