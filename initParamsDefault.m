@@ -120,9 +120,9 @@ end
 % set_param('bare_system/System/avg_users','Value','avg_usersArg')
 % set_param('bare_system/System/lower_limit','Value','lower_limitArg');
 % set_param('bare_system/System/upper_limit','Value','upper_limitArg');
-modelWorkspace = get_param('bare_system','ModelWorkspace');
-assignin(modelWorkspace,'conf_lambdaArg',Simulink.Parameter(1));
-assignin(modelWorkspace,'int_lambdaArg',Simulink.Parameter(1));
+% modelWorkspace = get_param('bare_system','ModelWorkspace');
+% assignin(modelWorkspace,'conf_lambdaArg',Simulink.Parameter(1));
+% assignin(modelWorkspace,'int_lambdaArg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'risk_delayArg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'risk_delay_lengthArg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'lower_limitArg',Simulink.Parameter(1));
@@ -132,5 +132,5 @@ assignin(modelWorkspace,'int_lambdaArg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'lambda2Arg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'random_seedArg',Simulink.Parameter(1));
 % assignin(modelWorkspace,'avg_usersArg',Simulink.Parameter(4));
-set_param('bare_system','ParameterArgumentNames',...
-    'lambda1Arg,lambda2Arg,random_seedArg,conf_lambdaArg,risk_delayArg,risk_delay_lengthArg,lower_limitArg,upper_limitArg,int_lambdaArg')
+% set_param('bare_system','ParameterArgumentNames',...
+%     'lambda1Arg,lambda2Arg,random_seedArg,conf_lambdaArg,risk_delayArg,risk_delay_lengthArg,lower_limitArg,upper_limitArg,int_lambdaArg')
